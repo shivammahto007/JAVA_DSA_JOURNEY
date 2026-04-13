@@ -4,6 +4,8 @@ public class conditional {
         Scanner sc = new Scanner(System.in);
         int age = sc.nextInt();
 
+
+        //if else statements
         if( age>=18){
             System.out.println("adult");
             }
@@ -23,6 +25,8 @@ public class conditional {
           int a = sc.nextInt();
           int b = sc.nextInt();
 
+
+          // if elseif
           if (a == b ){
             System.out.println("equal");
           }
@@ -49,6 +53,8 @@ public class conditional {
                 System.out.println("invalid");
             }
 
+
+            // Switch statements
             switch (button) {
                 case 1: System.out.println("Hello");
                 break;
