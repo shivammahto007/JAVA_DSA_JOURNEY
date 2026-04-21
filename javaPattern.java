@@ -1,0 +1,168 @@
+import java.util.*;
+
+public class javaPattern {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // full rectangle pattern
+
+        System.out.println("print full rectangle !");
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= m; j++) {
+                System.out.print('*');
+
+            }
+            System.out.println();
+        }
+
+        // HOLLOW RECTANGLE PATTERN
+        System.out.println("print hallow rectangle !");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        for (int i = 1; i <= a; i++) {
+
+            for (int j = 1; j <= b; j++) {
+
+                if (i == 1 || j == 1 || i == a || j == b) {
+
+                    System.out.print("*");
+
+                } else {
+                    System.out.print(" ");
+
+                }
+            }
+            System.out.println();
+
+        }
+
+        // HALF pyramid
+        System.out.println("print half pyramid !");
+        int c = sc.nextInt();
+
+        for (int i = 1; i <= c; i++) {
+
+            for (int j = 1; j <= i; j++) {
+
+                System.out.print("*");
+
+            }
+            System.out.println();
+
+        }
+
+        // inverted half pyramid
+        System.out.println("print inverted half pyramid !");
+        int d = sc.nextInt();
+
+        for (int i = d; i >= 1; i--) {
+
+            for (int j = 1; j <= i; j++) {
+
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // inverted half pyramid rotated by 180 degree
+        System.out.println("print half inverted pyramid rotated by 180 degree !");
+        int e = sc.nextInt();
+
+        for (int i = 1; i <= e; i++) {
+
+            for (int j = 1; j <= e - i; j++) {
+                System.out.print(" ");
+
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // half pyramid with no.
+        System.out.println("print half pyramid with no. !");
+        int f = sc.nextInt();
+
+        for(int i=1; i<=f; i++){
+
+            for(int j=1; j<=i; j++){
+                System.out.print(j +" ");
+            }
+            System.out.println();
+        }
+
+        // inverted half pyramid with no.
+        System.out.println("print inverted half pyramid with no. !");
+        int g = sc.nextInt();
+
+        for(int i=g; i>=1; i--){
+            
+            for(int j=1; j<=i; j++){
+                System.out.print(j +" ");
+            }
+            System.out.println();
+        }
+
+        //Flyod's triangle
+        System.out.println("print flyod's trinagle !");
+        int h = sc.nextInt();
+        int number = 1;
+
+        for(int i =1; i<=h; i++){
+
+            for(int j=1; j<=i; j++){
+
+                System.out.print(number + " ");
+                number++;
+            }
+            System.out.println();
+        }
+
+        // 0-1 triangle
+
+         System.out.println("print 0-1 triangle !");
+         int k = sc.nextInt();
+
+         for(int i=1; i<=k; i++){
+
+            for(int j=1; j<=i; j++){
+
+                if((i+j) % 2 ==0){
+                    System.out.print("1 ");
+                }
+                else{
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+         }
+
+         //SOID Rhombus
+         System.out.println("print solid rhombus !");
+         int l = sc.nextInt();
+
+         for(int i=1; i<=l; i++){
+            
+            for(int j=1; j<= l-i; j++){
+                System.out.print(" ");
+            }
+            
+            for(int j=1; j<=l; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+         }
+
+         
+         
+
+    }
+}

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class LoopsHomework {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         // PRINT EVEN NO.
         int n = sc.nextInt();
 
@@ -12,18 +12,18 @@ public class LoopsHomework {
                 System.out.println(i);
             }
         }
-        
+
         // INFINITE LOOPS
-        //for (; ;) {
-          //  System.out.println("apna college");
-      //  }
+        // for (; ;) {
+        // System.out.println("apna college");
+        // }
 
         int input;
         do {
             System.out.println("press 1 to enter marks or 0 to stop");
             input = sc.nextInt();
 
-            while(input != 1 && input  !=0){
+            while (input != 1 && input != 0) {
                 System.out.println("only enter input (1 or 0).");
                 input = sc.nextInt();
             }
@@ -37,7 +37,6 @@ public class LoopsHomework {
 
                 } else if (marks >= 60 && marks <= 89) {
                     System.out.println("This is also Good.");
-
                 } else if (marks >= 0 && marks <= 59) {
                     System.out.println("This is Good as well.");
 
