@@ -9,11 +9,11 @@ public class javaPattern {
 
         System.out.println("print full rectangle !");
         int n = sc.nextInt();
-        int m = sc.nextInt();
+        // int m = sc.nextInt();
 
         for (int i = 1; i <= n; i++) {
 
-            for (int j = 1; j <= m; j++) {
+            for (int j = 1; j <= n; j++) {
                 System.out.print('*');
 
             }
@@ -23,13 +23,13 @@ public class javaPattern {
         // HOLLOW RECTANGLE PATTERN
         System.out.println("print hallow rectangle !");
         int a = sc.nextInt();
-        int b = sc.nextInt();
+        // int b = sc.nextInt();
 
         for (int i = 1; i <= a; i++) {
 
-            for (int j = 1; j <= b; j++) {
+            for (int j = 1; j <= a; j++) {
 
-                if (i == 1 || j == 1 || i == a || j == b) {
+                if (i == 1 || j == 1 || i == a || j == a) {
 
                     System.out.print("*");
 
@@ -61,9 +61,9 @@ public class javaPattern {
         System.out.println("print inverted half pyramid !");
         int d = sc.nextInt();
 
-        for (int i = d; i >= 1; i--) {
+        for (int i = 1; i <= d; i++) {
 
-            for (int j = 1; j <= i; j++) {
+            for (int j = 1; j <= d - i + 1; j++) {
 
                 System.out.print("*");
             }
@@ -220,15 +220,15 @@ public class javaPattern {
         for (int i = 1; i <= q; i++) {
             // for spaces
             for (int j = 1; j <= q - i; j++) {
-                System.out.print(" ");
+                System.out.print("  ");
 
             }
 
             for (int j = i; j >= 1; j--) {
-                System.out.print(j);
+                System.out.print(j + " ");
             }
             for (int j = 2; j <= i; j++) {
-                System.out.print(j);
+                System.out.print(j + " ");
             }
             System.out.println();
         }
@@ -254,6 +254,127 @@ public class javaPattern {
             }
             System.out.println();
         }
-    }
 
+        // hallow buutterfly
+        System.out.println("print the hallow butterfly !");
+        int s = sc.nextInt();
+
+        for (int i = 1; i <= s; i++) {
+            // first part star
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            // for spaces
+            for (int j = 1; j <= 2 * (s - i); j++) {
+                System.out.print(" ");
+            }
+
+            // second part star *
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+        // Second half butterfly iverted
+        for (int i = s; i >= 1; i--) {
+            // first part star
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            // for spaces
+            for (int j = 1; j <= 2 * (s - i); j++) {
+                System.out.print(" ");
+            }
+
+            // second part star *
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+
+        // Hallow Rombus
+        System.out.println("print the hallow rohmbus !");
+        int t = sc.nextInt();
+
+        for (int i = 1; i <= t; i++) {
+            for (int j = 1; j <= t - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= t; j++) {
+                if (i == 1 || i == t || j == 1 || j == t) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+        // pascal's triangle
+        System.out.println("print the pascal's triangle !");
+        int u = sc.nextInt();
+
+        for (int i = 0; i < u; i++) {
+            for (int j = 1; j <= u - i; j++) {
+                System.out.print("  ");
+            }
+            int current_no = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(current_no + "   ");
+                current_no = current_no * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+
+        // print half pyraid with number
+        System.out.println("print half pyramid with  numbers !");
+        int v = sc.nextInt();
+
+        for (int i = 1; i <= v; i++) {
+            for (int j = 1; j <= v - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+        // half inverted pyramid
+        System.out.println("print the half inverted pyramid !");
+        int w = sc.nextInt();
+
+        for (int i=1; i<=w; i++) {
+            for(int j=1; j<=w-i; j++){
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= w-i+1; j++) {
+                System.out.print(i);
+            }
+
+            System.out.println();
+        }
+    }
 }
